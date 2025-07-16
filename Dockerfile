@@ -18,4 +18,5 @@ COPY . .
 # Install Laravel PHP dependencies
 RUN composer install
 
-CMD ["php-fpm"]
+# ✅ Start Laravel dev server instead of php-fpm
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
