@@ -17,8 +17,10 @@ services:
     image: mysql:8
     container_name: mysql-db
     environment:
-      MYSQL_DATABASE: docker_laravel
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: laravel-docker
+      MYSQL_ROOT_PASSWORD: laravel-docker
+      MYSQL_USER: laraveldocker
+      MYSQL_PASSWORD: laravel-docker
     ports:
       - "3306:3306"
     volumes:
